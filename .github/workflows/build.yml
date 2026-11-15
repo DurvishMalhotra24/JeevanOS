@@ -1,0 +1,17 @@
+name: Build JeevanOS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Compile JeevanOS
+        run: gcc -std=c11 -Wall -Wextra -pedantic main.c -o jeevanos
