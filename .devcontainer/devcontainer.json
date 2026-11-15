@@ -1,0 +1,12 @@
+{
+  "name": "JeevanOS C Development",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-debian-12",
+  "postCreateCommand": "gcc --version",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}
